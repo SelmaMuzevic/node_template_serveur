@@ -10,9 +10,29 @@ app.get("/", function(req, resp) {
     resp.render('index', {
         name: 'Selma',
         adjective: 'happy',
-        nameList: db
+        nameList: db,
+        nameList2: tab
     });
+
 });
+// tableau qui contien 3 objets, qui contiennes des proprietes et des valeurs 
+// et contenu dans une variable appellé 'tab'
+let tab = [{
+        event: "soleil",
+        place: "Lyon",
+        date: "2016-03-12"
+    },
+    {
+        event: "printemps",
+        place: "Paris",
+        date: "2016-05-11"
+    },
+    {
+        event: "cuisine",
+        place: "Miami",
+        date: "2006-03-06"
+    }
+];
 
 app.get("/test", function(req, resp) {
     let str = mustache.render("Hello {{name}}!!! You are awesome!", {
