@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SelmaMuzevic/node_template_serveur/issues"
   },
-  "homepage": "https://github.com/SelmaMuzevic/node_template_serveur#readme"
+  "homepage": "https://github.com/SelmaMuzevic/node_template_serveur#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
