@@ -2,12 +2,15 @@ const fs = require('fs');
 const express = require('express');
 const mustache = require('mustache');
 
+let db = ["Toto", "Tata", "Titi", "John", "Tutu"];
+
 let app = express();
 
 app.get("/", function(req, resp) {
     resp.render('index', {
         name: 'Selma',
-        adjective: 'hungry'
+        adjective: 'happy',
+        nameList: db
     });
 });
 
@@ -35,7 +38,7 @@ app.engine("html", function(path, options, callback) {
     })
 });
 
-let db = ["Toto", "Tata", "Titi", "John", "Tutu"];
+
 // specifier les directory
 app.set("views", "./template");
 
